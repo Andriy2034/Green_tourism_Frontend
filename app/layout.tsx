@@ -50,8 +50,12 @@ export default function RootLayout({
   return (
     <html
       lang="uk"
+      suppressHydrationWarning
       className={`${sora.variable} ${montserrat.variable} ${nunito.variable}`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: "(function(){var key='green-tourism-theme';var media=window.matchMedia('(prefers-color-scheme: dark)');var saved=null;try{saved=localStorage.getItem(key)}catch(e){}var chosen=saved==='dark'||saved==='light';function apply(theme){document.documentElement.dataset.theme=theme}apply(chosen?saved:(media.matches?'dark':'light'));media.addEventListener('change',function(e){var current=null;try{current=localStorage.getItem(key)}catch(err){}if(current!=='dark'&&current!=='light')apply(e.matches?'dark':'light')});window.addEventListener('storage',function(e){if(e.key===key||e.key===null)apply(e.newValue==='dark'||e.newValue==='light'?e.newValue:(media.matches?'dark':'light'))})})();" }} />
+      </head>
       <body>
         <TanstackProvider>
           <AuthProvider>

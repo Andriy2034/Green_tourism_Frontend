@@ -1,0 +1,21 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin-left: auto;
+  border: 1px solid var(--color-scheme-2-border);
+  border-radius: 50%;
+  background: var(--color-scheme-2-foreground);
+  color: var(--color-scheme-2-text);
+  cursor: pointer;
+}
+.toggle:hover { opacity: 0.8; }
+.toggle:focus-visible { outline: 2px solid var(--color-mantis); outline-offset: 3px; }
+@media (min-width: 1440px) { .toggle { margin-left: 0; } }
+.sun { display: none; }
+:global(html[data-theme="dark"]) .sun { display: block; }
+:global(html[data-theme="dark"]) .moon { display: none; }

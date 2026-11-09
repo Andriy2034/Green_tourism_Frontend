@@ -13,6 +13,8 @@ import Logo from "../Logo/Logo";
 import UserBar from "../UserBar/UserBar";
 import AuthNavigation from "../AuthNavigation/AuthNavigation";
 
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+
 import css from "./Header.module.css";
 
 const navigationLinks = [
@@ -175,6 +177,8 @@ function HeaderContent({
               <AuthNavigation variant="header" />
             )}
           </div>
+
+          <ThemeToggle />
 
           <button
             ref={burgerRef}

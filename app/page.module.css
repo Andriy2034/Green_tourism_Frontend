@@ -1,6 +1,6 @@
 .loader {
-  margin: 0;
-  padding: 32px 16px;
-  background-color: #eef8ee;
-  color: #1b391b;
+  margin:0;
+  padding:32px 16px;
+  background-color:var(--theme-eef8ee-3ead);
+  color:var(--theme-1b391b-53cc);
 }
