@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(privat routes)/profile/(tabs)/layout.module.css"],"sourcesContent":[".profile {\n  padding-bottom: 64px;\n  background-color: var(--color-scheme-2-background);\n  flex-grow: 1;\n}\n\n@media (min-width: 1440px) {\n  .profile {\n    padding-bottom: 72px;\n  }\n}\n"],"names":[],"mappings":"AAAA;;;;;;AAMA;EACE"}}]
-}

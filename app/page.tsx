@@ -39,7 +39,7 @@ export default async function Home() {
         <PrefetchTravellers />
         <About />
         <OurTravellers />
-        <Community isAuthenticated={false} />
+        <Community/>
       </main>
 
       <Footer />

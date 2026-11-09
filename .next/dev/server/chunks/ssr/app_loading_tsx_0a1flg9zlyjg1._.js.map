@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/admin/Desktop/Project/Green_tourism_Frontend/app/loading.tsx"],"sourcesContent":["export default function Loading(){\n    return <p>Loading, please wait...</p>\n\n}"],"names":["Loading"],"mappings":";;;;;;AAAe,SAASA;IACpB,qBAAO,8OAAC;kBAAE;;;;;;AAEd"}}]
-}

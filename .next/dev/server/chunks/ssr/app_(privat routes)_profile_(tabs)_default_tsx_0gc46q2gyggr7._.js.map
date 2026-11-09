@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/admin/Desktop/Project/Green_tourism_Frontend/app/(privat%20routes)/profile/(tabs)/default.tsx"],"sourcesContent":["export default function ProfileDefault() {\n  return null;\n}\n"],"names":["ProfileDefault"],"mappings":";;;;AAAe,SAASA;IACtB,OAAO;AACT"}}]
-}

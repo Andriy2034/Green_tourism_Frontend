@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/Logo/Logo.module.css"],"sourcesContent":[".logo {\n  display: inline-flex;\n  align-items: center;\n  gap: 3px;\n  color: inherit;\n  text-decoration: none;\n  cursor: pointer;\n}\n\n.logo:focus-visible {\n  outline: 2px solid currentColor;\n  outline-offset: 2px;\n}\n\n.icon {\n  display: block;\n  flex-shrink: 0;\n  width: 24px;\n  height: 24px;\n}\n\n.text {\n  font-weight: 500;\n  font-size: 17px;\n  line-height: 100%;\n  letter-spacing: -0.01em;\n  font-family: var(--font-montserrat), sans-serif;\n  color: var(--color-scheme-2-text);\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;AASA;;;;;AAKA;;;;;;;AAOA"}}]
-}

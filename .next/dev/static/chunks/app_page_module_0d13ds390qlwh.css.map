@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/admin/Desktop/Project/Green_tourism_Frontend/app/page.module.css"],"sourcesContent":[".loader {\n  margin: 0;\n  padding: 32px 16px;\n  background-color: #eef8ee;\n  color: #1b391b;\n}"],"names":[],"mappings":"AAAA"}}]
-}

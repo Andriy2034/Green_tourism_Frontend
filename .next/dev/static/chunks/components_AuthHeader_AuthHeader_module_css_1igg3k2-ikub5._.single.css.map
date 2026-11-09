@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/AuthHeader/AuthHeader.module.css"],"sourcesContent":[".header {\n  width: 100%;\n}\n\n.container {\n  box-sizing: border-box;\n  display: flex;\n  align-items: center;\n\n  width: 100%;\n  margin: 0 auto;\n  padding: 18px 20px;\n}\n\n.logo {\n  display: inline-flex;\n  align-items: center;\n  text-decoration: none;\n}\n\n.logo img {\n  display: block;\n  width: 100%;\n  max-width: 165px;\n  height: auto;\n}\n\n@media (min-width: 768px) {\n  .container {\n    padding: 18px 32px;\n  }\n}\n\n@media (min-width: 1440px) {\n  .container {\n    max-width: 1440px;\n    padding: 18px 64px;\n  }\n}"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;;;;AAUA;;;;;;AAMA;;;;;;;AAOA;EACE;;;;;AAKF;EACE"}}]
-}

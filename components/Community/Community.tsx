@@ -1,12 +1,18 @@
-import css from './Community.module.css';
-import Link from 'next/link';
-import Image from 'next/image';
+"use client";
 
-type CommunityProps = {
-  isAuthenticated: boolean;
-};
+import { useAuthStore } from "@/lib/store/authStore";
+import css from "./Community.module.css";
+import Link from "next/link";
+import Image from "next/image";
 
-const Community = ({ isAuthenticated }: CommunityProps) => {
+
+
+const Community = () => {
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const isAuthLoading = useAuthStore((state) => state.isAuthLoading);
+
+  if (isAuthLoading || isAuthenticated) return null;
+
   return (
     <div className={css.wrapper}>
       <div className={css.container}>
@@ -26,17 +32,13 @@ const Community = ({ isAuthenticated }: CommunityProps) => {
             </h2>
 
             <p className={css.description}>
-              Стань частиною ком’юніті, де подорожі стають не лише пригодою,
-              а й внеском у збереження природи. Тут ти знайдеш однодумців,
-              поради для сталих мандрів та натхнення для нових маршрутів
-              Україною.
+              Стань частиною ком’юніті, де подорожі стають не лише пригодою, а й
+              внеском у збереження природи. Тут ти знайдеш однодумців, поради
+              для сталих мандрів та натхнення для нових маршрутів Україною.
             </p>
 
-            <Link
-              href={isAuthenticated ? '/profile/saved' : '/register'}
-              className={css.joinbtn}
-            >
-              {isAuthenticated ? 'Збережені статті' : 'Зареєструватися'}
+            <Link href="/register" className={css.joinbtn}>
+              Зареєструватися
             </Link>
           </div>
         </section>

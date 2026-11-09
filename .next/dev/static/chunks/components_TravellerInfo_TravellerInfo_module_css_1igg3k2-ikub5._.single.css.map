@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/TravellerInfo/TravellerInfo.module.css"],"sourcesContent":[".cardWrapper {\n    background: var(--color-scheme-2-background);\n}\n\n.card {\n    display: flex;\n    gap: 24px;\n    align-items: center;\n    padding-top: 32px;\n}\n\n@media (min-width: 1440px) {\n    .card {\n        padding-top: 48px;\n    }    \n}\n\n.cardImage {\n    width: 113px;\n    height: 113px;\n    border-radius: 50%;\n}\n\n@media (min-width: 768px) {\n    .cardImage {\n        width: 145px;\n        height: 145px;\n    }\n}\n\n.cardTitle {\n    font-family: var(--font-family);\n    font-size: 20px;\n    line-height: 130%;\n    letter-spacing: -0.01em;\n    color: var(--color-scheme-2-text);\n    margin: 0;\n}\n\n@media (min-width: 1440px) {\n    .cardTitle {\n        font-size: 32px;\n    }\n}\n\n.articlesInfo {\n    font-family: var(--font-family);\n    line-height: 150%;\n    color: var(--color-scheme-2-text);\n    margin: 0;\n}\n\n@media (min-width: 1440px) {\n    .articlesInfo {\n        font-size: 20px;\n    }\n}"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;;AAOA;EACI;;;;;AAKJ;;;;;;AAMA;EACI;;;;;;AAMJ;;;;;;;;;AASA;EACI;;;;;AAKJ;;;;;;;AAOA;EACI"}}]
-}

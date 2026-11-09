@@ -1,7 +1,12 @@
-import css from './Hero.module.css';
-import Image from 'next/image';
+"use client";
+
+import { useAuthStore } from "@/lib/store/authStore";
+import css from "./Hero.module.css";
+import Image from "next/image";
 
 const Hero = () => {
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const isAuthLoading = useAuthStore((state) => state.isAuthLoading);
   return (
     <section className={css.hero}>
       <div className={css.container}>
@@ -20,9 +25,11 @@ const Hero = () => {
             України. Ми зібрали маршрути, які допоможуть побачити красу природи
             без шкоди для неї.
           </p>
-          <a href="#join" className={css.joinbtn}>
-            Доєднатись до мандрів
-          </a>
+          {!isAuthLoading && !isAuthenticated && (
+            <a href="#join" className={css.joinbtn}>
+              Доєднатись до мандрів
+            </a>
+          )}
         </div>
       </div>
     </section>
