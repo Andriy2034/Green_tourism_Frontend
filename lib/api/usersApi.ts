@@ -1,13 +1,8 @@
-import axios from 'axios';
+import { api } from './api';
 import type { UsersApiResponse } from '@/types/user';
 import { getErrorMessage } from '@/lib/utils';
 
-const api = axios.create({
-  baseURL:
-    process.env.NEXT_PUBLIC_API_BASE_URL ||
-    'https://green-tourism-backend.onrender.com/api',
-  withCredentials: true,
-});
+
 
 export interface FetchUsersParams {
   page?: number;
