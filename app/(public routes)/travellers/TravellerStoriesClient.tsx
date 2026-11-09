@@ -1,19 +1,18 @@
-'use client';
+"use client";
 
-import { useInfiniteQuery } from '@tanstack/react-query';
+import { useInfiniteQuery } from "@tanstack/react-query";
 
-import TravellersStories from '@/components/TravellersStories/TravellersStories';
-import LoadMore from '@/components/LoadMore/LoadMore';
+import TravellersStories from "@/components/TravellersStories/TravellersStories";
+import LoadMore from "@/components/LoadMore/LoadMore";
+import styles from "./page.module.css";
 
-import { fetchTravellerStories } from '@/lib/api/clientApi';
+import { fetchTravellerStories } from "@/lib/api/clientApi";
 
 type Props = {
   travellerId: string;
 };
 
-export default function TravellerStoriesClient({
-  travellerId,
-}: Props) {
+export default function TravellerStoriesClient({ travellerId }: Props) {
   const perPage = 6;
 
   const {
@@ -24,7 +23,7 @@ export default function TravellerStoriesClient({
     hasNextPage,
     fetchNextPage,
   } = useInfiniteQuery({
-    queryKey: ['travellerStories', travellerId, perPage],
+    queryKey: ["travellerStories", travellerId, perPage],
 
     queryFn: ({ pageParam }) =>
       fetchTravellerStories({
@@ -35,7 +34,7 @@ export default function TravellerStoriesClient({
 
     initialPageParam: 1,
 
-    getNextPageParam: lastPage => {
+    getNextPageParam: (lastPage) => {
       if (lastPage.page < lastPage.totalPages) {
         return lastPage.page + 1;
       }
@@ -51,25 +50,24 @@ export default function TravellerStoriesClient({
   }
 
   if (isError) {
-    return (
-      <p>
-        Не вдалося завантажити історії мандрівника.
-      </p>
-    );
+    return <p>Не вдалося завантажити історії мандрівника.</p>;
   }
 
-  const stories =
-    data?.pages.flatMap(page => page.stories) ?? [];
+  const stories = data?.pages.flatMap((page) => page.stories) ?? [];
 
   return (
     <>
       <TravellersStories stories={stories} />
 
-      <LoadMore
-        onLoadMore={() => fetchNextPage()}
-        isLoading={isFetchingNextPage}
-        hasMore={hasNextPage}
-      />
+      {hasNextPage && (
+        <div className={styles.loadMoreWrapper}>
+          <LoadMore
+            onLoadMore={() => fetchNextPage()}
+            isLoading={isFetchingNextPage}
+            hasMore={Boolean(hasNextPage)}
+          />
+        </div>
+      )}
     </>
   );
 }

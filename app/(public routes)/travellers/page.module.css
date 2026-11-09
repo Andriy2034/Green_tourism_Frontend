@@ -17,6 +17,17 @@
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
+.loadMoreWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-inline: 20px;
+}
+
+.loadMoreWrapper > button {
+  width: auto;
+  padding-inline: 24px;
+}
 
 @keyframes spin {
   to {
