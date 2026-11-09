@@ -1,6 +1,6 @@
 var R=require("../../../chunks/ssr/[turbopack]_runtime.js")("server/app/(public routes)/travellers/page.js")
-R.c("server/chunks/ssr/node_modules_0k5n6bkak09--._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__1ejco_tks9gis._.js")
+R.c("server/chunks/ssr/node_modules_1-kq6u0rox5e3._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__1r1pu3o6_4lrn._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_esm_server_1iefgs_oydxq6._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_esm_shared_lib_0egrsbsrzxj7x._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_esm_lib_0i7_y587f5_nr._.js")

@@ -1,5 +1,12 @@
 {
   "app": {
+    "[project]/app/(auth routes)/register/page": [
+      "static/media/1361b9baaefe9807-s.p.1d_6dtvtn9g3_.woff2",
+      "static/media/65341aea9fb91af5-s.p.1dqa_6e_ad4sj.woff2",
+      "static/media/325b8707bd86f089-s.p.02m2p-env-7db.woff2",
+      "static/media/0069d14c43d1997c-s.p.380f-mwhk0aej.woff2",
+      "static/media/01cf1265ae01a17f-s.p.3lui1in5op4ar.woff2"
+    ],
     "[project]/app/(public routes)/travellers/page": [
       "static/media/1361b9baaefe9807-s.p.1d_6dtvtn9g3_.woff2",
       "static/media/65341aea9fb91af5-s.p.1dqa_6e_ad4sj.woff2",

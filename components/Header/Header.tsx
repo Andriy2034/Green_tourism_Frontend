@@ -1,24 +1,24 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
-import { useQueryClient } from '@tanstack/react-query';
-import { useAuthStore } from '@/lib/store/authStore';
-import { logout } from '@/lib/api/clientApi';
-import type { User } from '@/types/user';
-import { usePathname, useRouter } from 'next/navigation';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useEffect, useRef, useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
+import { useAuthStore } from "@/lib/store/authStore";
+import { logout } from "@/lib/api/clientApi";
+import type { User } from "@/types/user";
+import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 
-import Logo from '../Logo/Logo';
-import UserBar from '../UserBar/UserBar';
-import AuthNavigation from '../AuthNavigation/AuthNavigation';
+import Logo from "../Logo/Logo";
+import UserBar from "../UserBar/UserBar";
+import AuthNavigation from "../AuthNavigation/AuthNavigation";
 
-import css from './Header.module.css';
+import css from "./Header.module.css";
 
 const navigationLinks = [
-  { href: '/', label: 'Головна' },
-  { href: '/stories', label: 'Статті' },
-  { href: '/travellers', label: 'Еко-Мандрівники' },
+  { href: "/", label: "Головна" },
+  { href: "/stories", label: "Статті" },
+  { href: "/travellers", label: "Еко-Мандрівники" },
 ];
 
 export default function Header() {
@@ -26,26 +26,27 @@ export default function Header() {
 
   const router = useRouter();
   const queryClient = useQueryClient();
-  const user = useAuthStore(state => state.user);
-  const isAuthenticated = useAuthStore(state => state.isAuthenticated);
-  const clear = useAuthStore(state => state.clearIsAuthenticated);
+  const user = useAuthStore((state) => state.user);
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const clear = useAuthStore((state) => state.clearIsAuthenticated);
+  const isAuthLoading = useAuthStore((state) => state.isAuthLoading);
 
   async function handleLogout() {
     await logout();
     await queryClient.cancelQueries();
     queryClient.clear();
     clear();
-    router.replace('/');
+    router.replace("/");
     router.refresh();
   }
 
-
-  if (pathname === '/login' || pathname === '/register') return null;
+  if (pathname === "/login" || pathname === "/register") return null;
 
   return (
     <HeaderContent
       pathname={pathname}
       isAuthenticated={isAuthenticated && Boolean(user)}
+      isAuthLoading={isAuthLoading}
       user={user}
       onLogout={handleLogout}
     />
@@ -55,6 +56,7 @@ export default function Header() {
 type HeaderContentProps = {
   pathname: string;
   isAuthenticated: boolean;
+  isAuthLoading: boolean;
   user: User | null;
   onLogout: () => Promise<void>;
 };
@@ -62,6 +64,7 @@ type HeaderContentProps = {
 function HeaderContent({
   pathname,
   isAuthenticated,
+  isAuthLoading,
   user,
   onLogout,
 }: HeaderContentProps) {
@@ -79,7 +82,7 @@ function HeaderContent({
   }
 
   useEffect(() => {
-    const desktop = window.matchMedia('(min-width: 1440px)');
+    const desktop = window.matchMedia("(min-width: 1440px)");
 
     function handleResize() {
       if (desktop.matches) {
@@ -87,10 +90,10 @@ function HeaderContent({
       }
     }
 
-    desktop.addEventListener('change', handleResize);
+    desktop.addEventListener("change", handleResize);
 
     return () => {
-      desktop.removeEventListener('change', handleResize);
+      desktop.removeEventListener("change", handleResize);
     };
   }, []);
 
@@ -98,7 +101,7 @@ function HeaderContent({
     if (!isMenuOpen) return;
 
     const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
 
     return () => {
       document.body.style.overflow = previousOverflow;
@@ -111,7 +114,7 @@ function HeaderContent({
         key={href}
         href={href}
         className={css.navLink}
-        aria-current={pathname === href ? 'page' : undefined}
+        aria-current={pathname === href ? "page" : undefined}
         onClick={closeMenu}
       >
         {label}
@@ -121,9 +124,9 @@ function HeaderContent({
 
   return (
     <header
-      className={`${css.header} ${isMenuOpen ? css.headerOpen : ''}`}
-      onKeyDown={event => {
-        if (event.key === 'Escape' && isMenuOpen) {
+      className={`${css.header} ${isMenuOpen ? css.headerOpen : ""}`}
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && isMenuOpen) {
           closeMenu();
           burgerRef.current?.focus();
         }
@@ -133,18 +136,15 @@ function HeaderContent({
         <div className={css.topBar}>
           <Logo />
 
-          <nav
-            className={css.desktopNavigation}
-            aria-label="Основна навігація"
-          >
+          <nav className={css.desktopNavigation} aria-label="Основна навігація">
             {renderLinks()}
 
-            {isAuthenticated && (
+            {!isAuthLoading && isAuthenticated && (
               <Link
                 href="/profile/saved"
                 className={css.navLink}
                 aria-current={
-                  pathname.startsWith('/profile') ? 'page' : undefined
+                  pathname.startsWith("/profile") ? "page" : undefined
                 }
               >
                 Мій профіль
@@ -153,7 +153,11 @@ function HeaderContent({
           </nav>
 
           <div className={css.topActions}>
-            {isAuthenticated ? (
+            {isAuthLoading ? (
+              <span role="status" aria-label="Перевірка авторизації">
+                Завантаження…
+              </span>
+            ) : isAuthenticated ? (
               <>
                 <Link href="/new-story" className={css.publishLink}>
                   Опублікувати статтю
@@ -161,7 +165,7 @@ function HeaderContent({
 
                 <div className={css.desktopUserBar}>
                   <UserBar
-                    name={user?.name || 'Мандрівник'}
+                    name={user?.name || "Мандрівник"}
                     avatarUrl={user?.avatarUrl}
                     onLogout={handleLogout}
                   />
@@ -176,17 +180,17 @@ function HeaderContent({
             ref={burgerRef}
             type="button"
             className={css.burger}
-            aria-label={isMenuOpen ? 'Закрити меню' : 'Відкрити меню'}
+            aria-label={isMenuOpen ? "Закрити меню" : "Відкрити меню"}
             aria-expanded={isMenuOpen}
             aria-controls="header-menu"
             onClick={() =>
-              setOpenMenuPath(current =>
-                current === pathname ? null : pathname
+              setOpenMenuPath((current) =>
+                current === pathname ? null : pathname,
               )
             }
           >
             <Image
-              src={isMenuOpen ? '/icons/close.svg' : '/icons/burger.svg'}
+              src={isMenuOpen ? "/icons/close.svg" : "/icons/burger.svg"}
               alt=""
               width={24}
               height={24}
@@ -194,15 +198,8 @@ function HeaderContent({
           </button>
         </div>
 
-        <div
-          id="header-menu"
-          className={css.menuPanel}
-          hidden={!isMenuOpen}
-        >
-          <nav
-            className={css.menuNavigation}
-            aria-label="Основна навігація"
-          >
+        <div id="header-menu" className={css.menuPanel} hidden={!isMenuOpen}>
+          <nav className={css.menuNavigation} aria-label="Основна навігація">
             {renderLinks()}
           </nav>
 
@@ -218,16 +215,13 @@ function HeaderContent({
                 </Link>
 
                 <UserBar
-                  name={user?.name || 'Мандрівник'}
+                  name={user?.name || "Мандрівник"}
                   avatarUrl={user?.avatarUrl}
                   onLogout={handleLogout}
                 />
               </>
             ) : (
-              <div
-                className={css.mobileAuth}
-                onClick={closeMenu}
-              >
+              <div className={css.mobileAuth} onClick={closeMenu}>
                 <AuthNavigation variant="header" />
               </div>
             )}

@@ -381,7 +381,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$AuthNavigation
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/components/Header/Header.module.css [app-client] (css module)");
 ;
 var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
-'use client';
+"use client";
 ;
 ;
 ;
@@ -396,26 +396,26 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 ;
 const navigationLinks = [
     {
-        href: '/',
-        label: 'Головна'
+        href: "/",
+        label: "Головна"
     },
     {
-        href: '/stories',
-        label: 'Статті'
+        href: "/stories",
+        label: "Статті"
     },
     {
-        href: '/travellers',
-        label: 'Еко-Мандрівники'
+        href: "/travellers",
+        label: "Еко-Мандрівники"
     }
 ];
 function Header() {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(10);
-    if ($[0] !== "44979ae2cd813346032d73f4692f4af094e784720ddc05fa346041f2e83fac08") {
-        for(let $i = 0; $i < 10; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(11);
+    if ($[0] !== "e129730680f6faa6b65cb10e37a1ecd658eb32f8213c9237ed22624765880134") {
+        for(let $i = 0; $i < 11; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "44979ae2cd813346032d73f4692f4af094e784720ddc05fa346041f2e83fac08";
+        $[0] = "e129730680f6faa6b65cb10e37a1ecd658eb32f8213c9237ed22624765880134";
     }
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
@@ -423,6 +423,7 @@ function Header() {
     const user = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$authStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuthStore"])(_HeaderUseAuthStore);
     const isAuthenticated = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$authStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuthStore"])(_HeaderUseAuthStore2);
     const clear = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$authStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuthStore"])(_HeaderUseAuthStore3);
+    const isAuthLoading = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$authStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuthStore"])(_HeaderUseAuthStore4);
     let t0;
     if ($[1] !== clear || $[2] !== queryClient || $[3] !== router) {
         t0 = async function handleLogout() {
@@ -446,38 +447,44 @@ function Header() {
     }
     const t1 = isAuthenticated && Boolean(user);
     let t2;
-    if ($[5] !== handleLogout || $[6] !== pathname || $[7] !== t1 || $[8] !== user) {
+    if ($[5] !== handleLogout || $[6] !== isAuthLoading || $[7] !== pathname || $[8] !== t1 || $[9] !== user) {
         t2 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(HeaderContent, {
             pathname: pathname,
             isAuthenticated: t1,
+            isAuthLoading: isAuthLoading,
             user: user,
             onLogout: handleLogout
         }, void 0, false, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 64,
+            lineNumber: 65,
             columnNumber: 10
         }, this);
         $[5] = handleLogout;
-        $[6] = pathname;
-        $[7] = t1;
-        $[8] = user;
-        $[9] = t2;
+        $[6] = isAuthLoading;
+        $[7] = pathname;
+        $[8] = t1;
+        $[9] = user;
+        $[10] = t2;
     } else {
-        t2 = $[9];
+        t2 = $[10];
     }
     return t2;
 }
-_s(Header, "7AHpwQnWNQvMrmEb3AxDch5F+Pk=", false, function() {
+_s(Header, "Jwc+KyBxZUyna4GwAE6Iz1nTlk8=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"],
         __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$authStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuthStore"],
         __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$authStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuthStore"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$authStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuthStore"],
         __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$store$2f$authStore$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuthStore"]
     ];
 });
 _c = Header;
+function _HeaderUseAuthStore4(state_2) {
+    return state_2.isAuthLoading;
+}
 function _HeaderUseAuthStore3(state_1) {
     return state_1.clearIsAuthenticated;
 }
@@ -489,14 +496,14 @@ function _HeaderUseAuthStore(state) {
 }
 function HeaderContent(t0) {
     _s1();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(60);
-    if ($[0] !== "44979ae2cd813346032d73f4692f4af094e784720ddc05fa346041f2e83fac08") {
-        for(let $i = 0; $i < 60; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(62);
+    if ($[0] !== "e129730680f6faa6b65cb10e37a1ecd658eb32f8213c9237ed22624765880134") {
+        for(let $i = 0; $i < 62; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "44979ae2cd813346032d73f4692f4af094e784720ddc05fa346041f2e83fac08";
+        $[0] = "e129730680f6faa6b65cb10e37a1ecd658eb32f8213c9237ed22624765880134";
     }
-    const { pathname, isAuthenticated, user, onLogout } = t0;
+    const { pathname, isAuthenticated, isAuthLoading, user, onLogout } = t0;
     const [openMenuPath, setOpenMenuPath] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const isMenuOpen = openMenuPath === pathname;
     const burgerRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -587,7 +594,7 @@ function HeaderContent(t0) {
                         children: label
                     }, href, false, {
                         fileName: "[project]/components/Header/Header.tsx",
-                        lineNumber: 187,
+                        lineNumber: 194,
                         columnNumber: 18
                     }, this);
                 }
@@ -619,7 +626,7 @@ function HeaderContent(t0) {
     if ($[13] === Symbol.for("react.memo_cache_sentinel")) {
         t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Logo$2f$Logo$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 215,
+            lineNumber: 222,
             columnNumber: 11
         }, this);
         $[13] = t10;
@@ -635,25 +642,26 @@ function HeaderContent(t0) {
         t11 = $[15];
     }
     let t12;
-    if ($[16] !== isAuthenticated || $[17] !== pathname) {
-        t12 = isAuthenticated && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+    if ($[16] !== isAuthLoading || $[17] !== isAuthenticated || $[18] !== pathname) {
+        t12 = !isAuthLoading && isAuthenticated && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
             href: "/profile/saved",
             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].navLink,
             "aria-current": pathname.startsWith("/profile") ? "page" : undefined,
             children: "Мій профіль"
         }, void 0, false, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 230,
-            columnNumber: 30
+            lineNumber: 237,
+            columnNumber: 48
         }, this);
-        $[16] = isAuthenticated;
-        $[17] = pathname;
-        $[18] = t12;
+        $[16] = isAuthLoading;
+        $[17] = isAuthenticated;
+        $[18] = pathname;
+        $[19] = t12;
     } else {
-        t12 = $[18];
+        t12 = $[19];
     }
     let t13;
-    if ($[19] !== t11 || $[20] !== t12) {
+    if ($[20] !== t11 || $[21] !== t12) {
         t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].desktopNavigation,
             "aria-label": "\u041E\u0441\u043D\u043E\u0432\u043D\u0430 \u043D\u0430\u0432\u0456\u0433\u0430\u0446\u0456\u044F",
@@ -663,20 +671,28 @@ function HeaderContent(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 239,
+            lineNumber: 247,
             columnNumber: 11
         }, this);
-        $[19] = t11;
-        $[20] = t12;
-        $[21] = t13;
+        $[20] = t11;
+        $[21] = t12;
+        $[22] = t13;
     } else {
-        t13 = $[21];
+        t13 = $[22];
     }
     let t14;
-    if ($[22] !== handleLogout || $[23] !== isAuthenticated || $[24] !== user?.avatarUrl || $[25] !== user?.name) {
+    if ($[23] !== handleLogout || $[24] !== isAuthLoading || $[25] !== isAuthenticated || $[26] !== user?.avatarUrl || $[27] !== user?.name) {
         t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].topActions,
-            children: isAuthenticated ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+            children: isAuthLoading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                role: "status",
+                "aria-label": "\u041F\u0435\u0440\u0435\u0432\u0456\u0440\u043A\u0430 \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0456\u0457",
+                children: "Завантаження…"
+            }, void 0, false, {
+                fileName: "[project]/components/Header/Header.tsx",
+                lineNumber: 256,
+                columnNumber: 60
+            }, this) : isAuthenticated ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: "/new-story",
@@ -684,8 +700,8 @@ function HeaderContent(t0) {
                         children: "Опублікувати статтю"
                     }, void 0, false, {
                         fileName: "[project]/components/Header/Header.tsx",
-                        lineNumber: 248,
-                        columnNumber: 64
+                        lineNumber: 256,
+                        columnNumber: 260
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].desktopUserBar,
@@ -695,55 +711,56 @@ function HeaderContent(t0) {
                             onLogout: handleLogout
                         }, void 0, false, {
                             fileName: "[project]/components/Header/Header.tsx",
-                            lineNumber: 248,
-                            columnNumber: 178
+                            lineNumber: 256,
+                            columnNumber: 374
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/Header/Header.tsx",
-                        lineNumber: 248,
-                        columnNumber: 142
+                        lineNumber: 256,
+                        columnNumber: 338
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Header/Header.tsx",
-                lineNumber: 248,
-                columnNumber: 62
+                lineNumber: 256,
+                columnNumber: 258
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$AuthNavigation$2f$AuthNavigation$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 variant: "header"
             }, void 0, false, {
                 fileName: "[project]/components/Header/Header.tsx",
-                lineNumber: 248,
-                columnNumber: 337
+                lineNumber: 256,
+                columnNumber: 533
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 248,
+            lineNumber: 256,
             columnNumber: 11
         }, this);
-        $[22] = handleLogout;
-        $[23] = isAuthenticated;
-        $[24] = user?.avatarUrl;
-        $[25] = user?.name;
-        $[26] = t14;
+        $[23] = handleLogout;
+        $[24] = isAuthLoading;
+        $[25] = isAuthenticated;
+        $[26] = user?.avatarUrl;
+        $[27] = user?.name;
+        $[28] = t14;
     } else {
-        t14 = $[26];
+        t14 = $[28];
     }
     const t15 = isMenuOpen ? "\u0417\u0430\u043A\u0440\u0438\u0442\u0438 \u043C\u0435\u043D\u044E" : "\u0412\u0456\u0434\u043A\u0440\u0438\u0442\u0438 \u043C\u0435\u043D\u044E";
     let t16;
-    if ($[27] !== pathname) {
+    if ($[29] !== pathname) {
         t16 = ({
             "HeaderContent[<button>.onClick]": ()=>setOpenMenuPath({
                     "HeaderContent[<button>.onClick > setOpenMenuPath()]": (current)=>current === pathname ? null : pathname
                 }["HeaderContent[<button>.onClick > setOpenMenuPath()]"])
         })["HeaderContent[<button>.onClick]"];
-        $[27] = pathname;
-        $[28] = t16;
+        $[29] = pathname;
+        $[30] = t16;
     } else {
-        t16 = $[28];
+        t16 = $[30];
     }
     const t17 = isMenuOpen ? "/icons/close.svg" : "/icons/burger.svg";
     let t18;
-    if ($[29] !== t17) {
+    if ($[31] !== t17) {
         t18 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$image$2d$component$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__Image__as__default$3e$__["default"], {
             src: t17,
             alt: "",
@@ -751,16 +768,16 @@ function HeaderContent(t0) {
             height: 24
         }, void 0, false, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 273,
+            lineNumber: 282,
             columnNumber: 11
         }, this);
-        $[29] = t17;
-        $[30] = t18;
+        $[31] = t17;
+        $[32] = t18;
     } else {
-        t18 = $[30];
+        t18 = $[32];
     }
     let t19;
-    if ($[31] !== isMenuOpen || $[32] !== t15 || $[33] !== t16 || $[34] !== t18) {
+    if ($[33] !== isMenuOpen || $[34] !== t15 || $[35] !== t16 || $[36] !== t18) {
         t19 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
             ref: burgerRef,
             type: "button",
@@ -772,19 +789,19 @@ function HeaderContent(t0) {
             children: t18
         }, void 0, false, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 281,
+            lineNumber: 290,
             columnNumber: 11
         }, this);
-        $[31] = isMenuOpen;
-        $[32] = t15;
-        $[33] = t16;
-        $[34] = t18;
-        $[35] = t19;
+        $[33] = isMenuOpen;
+        $[34] = t15;
+        $[35] = t16;
+        $[36] = t18;
+        $[37] = t19;
     } else {
-        t19 = $[35];
+        t19 = $[37];
     }
     let t20;
-    if ($[36] !== t13 || $[37] !== t14 || $[38] !== t19) {
+    if ($[38] !== t13 || $[39] !== t14 || $[40] !== t19) {
         t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].topBar,
             children: [
@@ -795,43 +812,43 @@ function HeaderContent(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 292,
+            lineNumber: 301,
             columnNumber: 11
         }, this);
-        $[36] = t13;
-        $[37] = t14;
-        $[38] = t19;
-        $[39] = t20;
+        $[38] = t13;
+        $[39] = t14;
+        $[40] = t19;
+        $[41] = t20;
     } else {
-        t20 = $[39];
+        t20 = $[41];
     }
     const t21 = !isMenuOpen;
     let t22;
-    if ($[40] !== renderLinks) {
+    if ($[42] !== renderLinks) {
         t22 = renderLinks();
-        $[40] = renderLinks;
-        $[41] = t22;
+        $[42] = renderLinks;
+        $[43] = t22;
     } else {
-        t22 = $[41];
+        t22 = $[43];
     }
     let t23;
-    if ($[42] !== t22) {
+    if ($[44] !== t22) {
         t23 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].menuNavigation,
             "aria-label": "\u041E\u0441\u043D\u043E\u0432\u043D\u0430 \u043D\u0430\u0432\u0456\u0433\u0430\u0446\u0456\u044F",
             children: t22
         }, void 0, false, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 311,
+            lineNumber: 320,
             columnNumber: 11
         }, this);
-        $[42] = t22;
-        $[43] = t23;
+        $[44] = t22;
+        $[45] = t23;
     } else {
-        t23 = $[43];
+        t23 = $[45];
     }
     let t24;
-    if ($[44] !== handleLogout || $[45] !== isAuthenticated || $[46] !== user?.avatarUrl || $[47] !== user?.name) {
+    if ($[46] !== handleLogout || $[47] !== isAuthenticated || $[48] !== user?.avatarUrl || $[49] !== user?.name) {
         t24 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].menuBottom,
             children: isAuthenticated ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -843,7 +860,7 @@ function HeaderContent(t0) {
                         children: "Опублікувати статтю"
                     }, void 0, false, {
                         fileName: "[project]/components/Header/Header.tsx",
-                        lineNumber: 319,
+                        lineNumber: 328,
                         columnNumber: 64
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$UserBar$2f$UserBar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -852,13 +869,13 @@ function HeaderContent(t0) {
                         onLogout: handleLogout
                     }, void 0, false, {
                         fileName: "[project]/components/Header/Header.tsx",
-                        lineNumber: 319,
+                        lineNumber: 328,
                         columnNumber: 188
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Header/Header.tsx",
-                lineNumber: 319,
+                lineNumber: 328,
                 columnNumber: 62
             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].mobileAuth,
@@ -867,29 +884,29 @@ function HeaderContent(t0) {
                     variant: "header"
                 }, void 0, false, {
                     fileName: "[project]/components/Header/Header.tsx",
-                    lineNumber: 319,
+                    lineNumber: 328,
                     columnNumber: 393
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Header/Header.tsx",
-                lineNumber: 319,
+                lineNumber: 328,
                 columnNumber: 341
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 319,
+            lineNumber: 328,
             columnNumber: 11
         }, this);
-        $[44] = handleLogout;
-        $[45] = isAuthenticated;
-        $[46] = user?.avatarUrl;
-        $[47] = user?.name;
-        $[48] = t24;
+        $[46] = handleLogout;
+        $[47] = isAuthenticated;
+        $[48] = user?.avatarUrl;
+        $[49] = user?.name;
+        $[50] = t24;
     } else {
-        t24 = $[48];
+        t24 = $[50];
     }
     let t25;
-    if ($[49] !== t21 || $[50] !== t23 || $[51] !== t24) {
+    if ($[51] !== t21 || $[52] !== t23 || $[53] !== t24) {
         t25 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             id: "header-menu",
             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].menuPanel,
@@ -900,18 +917,18 @@ function HeaderContent(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 330,
+            lineNumber: 339,
             columnNumber: 11
         }, this);
-        $[49] = t21;
-        $[50] = t23;
-        $[51] = t24;
-        $[52] = t25;
+        $[51] = t21;
+        $[52] = t23;
+        $[53] = t24;
+        $[54] = t25;
     } else {
-        t25 = $[52];
+        t25 = $[54];
     }
     let t26;
-    if ($[53] !== t20 || $[54] !== t25) {
+    if ($[55] !== t20 || $[56] !== t25) {
         t26 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2f$Header$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].container,
             children: [
@@ -920,32 +937,32 @@ function HeaderContent(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 340,
+            lineNumber: 349,
             columnNumber: 11
         }, this);
-        $[53] = t20;
-        $[54] = t25;
-        $[55] = t26;
+        $[55] = t20;
+        $[56] = t25;
+        $[57] = t26;
     } else {
-        t26 = $[55];
+        t26 = $[57];
     }
     let t27;
-    if ($[56] !== t26 || $[57] !== t8 || $[58] !== t9) {
+    if ($[58] !== t26 || $[59] !== t8 || $[60] !== t9) {
         t27 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
             className: t8,
             onKeyDown: t9,
             children: t26
         }, void 0, false, {
             fileName: "[project]/components/Header/Header.tsx",
-            lineNumber: 349,
+            lineNumber: 358,
             columnNumber: 11
         }, this);
-        $[56] = t26;
-        $[57] = t8;
-        $[58] = t9;
-        $[59] = t27;
+        $[58] = t26;
+        $[59] = t8;
+        $[60] = t9;
+        $[61] = t27;
     } else {
-        t27 = $[59];
+        t27 = $[61];
     }
     return t27;
 }
@@ -2206,18 +2223,13 @@ __turbopack_context__.s([
     "fetchUsers",
     ()=>fetchUsers
 ]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/api/api.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/utils.ts [app-client] (ecmascript)");
 ;
 ;
-const api = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].create({
-    baseURL: ("TURBOPACK compile-time value", "https://green-tourism-backend-5yt7.onrender.com/api") || 'https://green-tourism-backend.onrender.com/api',
-    withCredentials: true
-});
 async function fetchUsers(params) {
     try {
-        const response = await api.get('/users', {
+        const response = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["api"].get('/users', {
             params
         });
         return response.data;

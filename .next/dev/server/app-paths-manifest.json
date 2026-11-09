@@ -1,3 +1,4 @@
 {
+  "/(auth routes)/register/page": "app/(auth routes)/register/page.js",
   "/(public routes)/travellers/page": "app/(public routes)/travellers/page.js"
 }
