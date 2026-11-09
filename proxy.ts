@@ -87,21 +87,23 @@ export async function proxy(request: NextRequest) {
     pathname.startsWith(route)
   );
 
-  if (accessToken) {
-    if (isPublicRoute) {
-      return NextResponse.redirect(new URL("/", request.url));
-    }
-
-    return NextResponse.next();
-  }
+ if (accessToken && !isPublicRoute) {
+  return NextResponse.next();
+}
 
   if (!refreshToken || !sessionId) {
-    if (isPrivateRoute) {
-      return redirectToLogin(request);
-    }
-
-    return NextResponse.next();
+  if (isPrivateRoute) {
+    return redirectToLogin(request);
   }
+
+  const response = NextResponse.next();
+
+  if (isPublicRoute) {
+    clearAuthCookies(response);
+  }
+
+  return response;
+}
 
   const result = await checkSession(
     request.headers.get("cookie") ?? ""

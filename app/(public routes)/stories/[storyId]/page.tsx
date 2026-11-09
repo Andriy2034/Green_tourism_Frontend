@@ -1,21 +1,18 @@
+"use client";
 
-'use client';
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
+import StoryDetails from "@/components/StoryDetails/StoryDetails";
+import SaveStory from "@/components/SaveStory/SaveStory";
+import RecommendedStories from "@/components/RecommendedStories/RecommendedStories";
+import { useAuthStore } from "@/lib/store/authStore";
 
-import StoryDetails from '@/components/StoryDetails/StoryDetails';
-import SaveStory from '@/components/SaveStory/SaveStory';
-import RecommendedStories from '@/components/RecommendedStories/RecommendedStories';
+import { getStoryById, type StoryDetailsData } from "@/lib/api/storyApi";
 
-import {
-  getStoryById,
-  type StoryDetailsData,
-} from '@/lib/api/storyApi';
-
-import styles from './page.module.css';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
+import styles from "./page.module.css";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 export default function StoryPage() {
   const params = useParams<{ storyId: string }>();
@@ -23,6 +20,8 @@ export default function StoryPage() {
   const [story, setStory] = useState<StoryDetailsData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isNotFound, setIsNotFound] = useState(false);
+  const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
+  const isAuthLoading = useAuthStore((state) => state.isAuthLoading);
 
   useEffect(() => {
     const loadStory = async () => {
@@ -48,10 +47,7 @@ export default function StoryPage() {
     return (
       <main className={styles.page}>
         <div className={styles.loaderWrapper}>
-          <span
-            className={styles.loader}
-            aria-label="Завантаження"
-          />
+          <span className={styles.loader} aria-label="Завантаження" />
         </div>
       </main>
     );
@@ -65,19 +61,19 @@ export default function StoryPage() {
     );
   }
 
-  return (<>
-  <Header/>
-    <main className={styles.page}>
-      <StoryDetails story={story} />
+  return (
+    <>
+      <Header />
+      <main className={styles.page}>
+        <StoryDetails story={story} />
 
-      <SaveStory
-        storyId={story._id}
-        isAuthenticated={false}
-      />
+        {!isAuthLoading && (
+          <SaveStory storyId={story._id} isAuthenticated={isAuthenticated} />
+        )}
 
-      <RecommendedStories currentStoryId={story._id} />
-    </main>
-    <Footer/>
+        <RecommendedStories currentStoryId={story._id} />
+      </main>
+      <Footer />
     </>
   );
 }
