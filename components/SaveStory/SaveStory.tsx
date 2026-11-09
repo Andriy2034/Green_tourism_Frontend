@@ -1,7 +1,8 @@
-
 'use client';
 
 import { useState } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
+import { useAuthStore } from '@/lib/store/authStore';
 import { saveStory, unsaveStory } from '@/lib/api/storyApi';
 import ErrorWhileSavingModal from '@/components/ErrorWhileSavingModal/ErrorWhileSavingModal';
 import styles from './SaveStory.module.css';
@@ -9,15 +10,17 @@ import styles from './SaveStory.module.css';
 type SaveStoryProps = {
   storyId: string;
   isAuthenticated: boolean;
-  initiallySaved?: boolean;
 };
 
 export default function SaveStory({
   storyId,
   isAuthenticated,
-  initiallySaved = false,
 }: SaveStoryProps) {
-  const [isSaved, setIsSaved] = useState(initiallySaved);
+  const queryClient = useQueryClient();
+  const user = useAuthStore(state => state.user);
+
+  const isSaved = user?.savedArticles?.includes(storyId) ?? false;
+
   const [isSaving, setIsSaving] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -28,19 +31,35 @@ export default function SaveStory({
       return;
     }
 
+    if (isSaving) return;
+
     try {
       setIsSaving(true);
       setErrorMessage('');
 
-      if (isSaved) {
-        await unsaveStory(storyId);
-        setIsSaved(false);
-      } else {
-        await saveStory(storyId);
-        setIsSaved(true);
+      const data = isSaved
+        ? await unsaveStory(storyId)
+        : await saveStory(storyId);
+
+      const currentUser = useAuthStore.getState().user;
+
+      if (currentUser) {
+        const updatedUser = {
+          ...currentUser,
+          savedArticles: data.savedArticles,
+        };
+
+        useAuthStore.getState().setUser(updatedUser);
+        queryClient.setQueryData(['currentUser'], updatedUser);
       }
+
+      void queryClient.invalidateQueries({
+        queryKey: ['profileStories'],
+      });
     } catch {
-      setErrorMessage('Не вдалося зберегти історію. Спробуйте ще раз.');
+      setErrorMessage(
+        'Не вдалося оновити збережені історії. Спробуйте ще раз.',
+      );
     } finally {
       setIsSaving(false);
     }
@@ -59,9 +78,11 @@ export default function SaveStory({
         className={styles.button}
         onClick={handleToggleSaved}
         disabled={isSaving}
+        aria-pressed={isSaved}
+        aria-busy={isSaving}
       >
         {isSaving
-          ? 'Завантаження...'
+          ? 'Завантаження…'
           : isSaved
             ? 'Видалити зі збережених'
             : 'Зберегти'}
