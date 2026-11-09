@@ -1,0 +1,32 @@
+/* [project]/components/Logo/Logo.module.css [app-client] (css) */
+.Logo-module__MSOgda__logo {
+  color: inherit;
+  cursor: pointer;
+  align-items: center;
+  gap: 3px;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.Logo-module__MSOgda__logo:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid;
+}
+
+.Logo-module__MSOgda__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.Logo-module__MSOgda__text {
+  letter-spacing: -.01em;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 100%;
+  font-family: var(--font-montserrat), sans-serif;
+  color: var(--color-scheme-2-text);
+}
+
+/*# sourceMappingURL=components_Logo_Logo_module_css_1igg3k2-ikub5._.single.css.map*/

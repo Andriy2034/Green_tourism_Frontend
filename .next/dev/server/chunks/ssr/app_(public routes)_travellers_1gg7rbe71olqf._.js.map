@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/admin/Desktop/Project/Green_tourism_Frontend/app/(public%20routes)/travellers/loading.tsx"],"sourcesContent":["import styles from './page.module.css';\n\nexport default function TravellersLoading() {\n  return (\n    <main className={styles.page}>\n      <div className={styles.loaderWrap}>\n        <span\n          className={styles.loader}\n          role=\"status\"\n          aria-label=\"Завантаження\"\n        />\n      </div>\n    </main>\n  );\n}\n"],"names":["TravellersLoading","className","page","loaderWrap","loader","role"],"mappings":";;;;;AAAA;;;AAEe,SAASA;IACtB,qBACE,8OAAC;QAAKC,WAAW,sKAAM,CAACC,IAAI;kBAC1B,cAAA,8OAAC;YAAID,WAAW,sKAAM,CAACE,UAAU;sBAC/B,cAAA,8OAAC;gBACCF,WAAW,sKAAM,CAACG,MAAM;gBACxBC,MAAK;gBACL,cAAW;;;;;;;;;;;;;;;;AAKrB"}},
+    {"offset": {"line": 44, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/(public routes)/travellers/page.module.css [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"loader\": \"page-module__xUe6pa__loader\",\n  \"loaderWrap\": \"page-module__xUe6pa__loaderWrap\",\n  \"page\": \"page-module__xUe6pa__page\",\n  \"spin\": \"page-module__xUe6pa__spin\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA"}}]
+}

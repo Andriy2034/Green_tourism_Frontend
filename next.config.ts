@@ -24,7 +24,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://green-tourism-backend.onrender.com/api/:path*',
+        destination: 'https://green-tourism-backend-5yt7.onrender.com/api/:path*',
       },
     ];
   },

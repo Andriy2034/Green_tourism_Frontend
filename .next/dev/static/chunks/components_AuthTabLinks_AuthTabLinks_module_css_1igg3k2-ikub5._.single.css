@@ -1,0 +1,45 @@
+/* [project]/components/AuthTabLinks/AuthTabLinks.module.css [app-client] (css) */
+.AuthTabLinks-module__QvrCUG__tabs {
+  width: 100%;
+  max-width: 644px;
+  display: flex;
+}
+
+.AuthTabLinks-module__QvrCUG__link {
+  font-family: var(--font-nunito), sans-serif;
+  text-align: center;
+  color: var(--color-scheme-1-text);
+  border-bottom: 1px solid #0000;
+  border-radius: 4px 4px 0 0;
+  flex: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: background-color .2s;
+  display: flex;
+}
+
+.AuthTabLinks-module__QvrCUG__active {
+  border-bottom-color: var(--color-scheme-1-border);
+}
+
+.AuthTabLinks-module__QvrCUG__link:hover:not(.AuthTabLinks-module__QvrCUG__active) {
+  background-color: var(--color-scheme-1-foreground);
+}
+
+.AuthTabLinks-module__QvrCUG__link:focus-visible {
+  outline: 3px solid var(--color-mantis-light);
+  outline-offset: -3px;
+}
+
+@media (min-width: 1440px) {
+  .AuthTabLinks-module__QvrCUG__link {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=components_AuthTabLinks_AuthTabLinks_module_css_1igg3k2-ikub5._.single.css.map*/

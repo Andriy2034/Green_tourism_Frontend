@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/admin/Desktop/Project/Green_tourism_Frontend/app/(auth%20routes)/layout.tsx"],"sourcesContent":["'use client'\n\nimport { useRouter } from \"next/navigation\"\nimport { startTransition, useEffect, useState } from \"react\";\n\ninterface LayoutChildren{\n    children: React.ReactNode,\n}\n\nexport default function AuthLayout({  children }: LayoutChildren) {\n    const [loading, setLoading] = useState(true);\n    const router = useRouter();\n \n    useEffect(() => {\n        router.refresh();\n        startTransition(() => {\n            setLoading(false);\n        });\n    }, [router]);\n\n    return (\n        <>\n            {loading ? <div>Loading...</div> : children}\n        </>\n    );\n}"],"names":["AuthLayout","children","loading","setLoading","router","refresh"],"mappings":";;;;;AAEA;AACA;AAHA;;;;AASe,SAASA,WAAW,EAAGC,QAAQ,EAAkB;IAC5D,MAAM,CAACC,SAASC,WAAW,GAAG,IAAA,iNAAQ,EAAC;IACvC,MAAMC,SAAS,IAAA,+IAAS;IAExB,IAAA,kNAAS,EAAC;QACNA,OAAOC,OAAO;QACd,IAAA,wNAAe,EAAC;YACZF,WAAW;QACf;IACJ,GAAG;QAACC;KAAO;IAEX,qBACI;kBACKF,wBAAU,8OAAC;sBAAI;;;;;mBAAmBD;;;;;;AAG/C"}}]
+}

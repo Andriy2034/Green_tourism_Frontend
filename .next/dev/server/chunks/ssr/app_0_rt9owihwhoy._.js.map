@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/admin/Desktop/Project/Green_tourism_Frontend/app/not-found.tsx"],"sourcesContent":["import css from './page.module.css';\nimport { Metadata } from 'next';\n\nexport const metadata: Metadata = {\n  title:'404 - Page not found | NoteHub',\n  description: 'This page does not exist or has been moved',\n}\nexport default function NotFound() {\n  return (\n    <>\n      <h1 className={css.title}>404 - Page not found</h1>\n      <p className={css.description}>\n        Sorry, the page you are looking for does not exist.\n      </p>\n    </>\n  );\n}"],"names":["metadata","title","description","NotFound","className"],"mappings":";;;;;;;AAAA;;;AAGO,MAAMA,WAAqB;IAChCC,OAAM;IACNC,aAAa;AACf;AACe,SAASC;IACtB,qBACE;;0BACE,8OAAC;gBAAGC,WAAW,kIAAG,CAACH,KAAK;0BAAE;;;;;;0BAC1B,8OAAC;gBAAEG,WAAW,kIAAG,CAACF,WAAW;0BAAE;;;;;;;;;;;;AAKrC"}},
+    {"offset": {"line": 51, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/page.module.css [app-rsc] (css module)"],"sourcesContent":["__turbopack_context__.v({\n  \"loader\": \"page-module__E0kJGG__loader\",\n});\n"],"names":[],"mappings":"AAAA;AACA;AACA"}}]
+}

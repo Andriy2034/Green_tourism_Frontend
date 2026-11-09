@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/AuthFooter/AuthFooter.module.css"],"sourcesContent":[".footer {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin-top: auto;\n    padding-top: 24px;\n    padding-bottom: 24px;\n}\n\n.copyright {\n    margin: 0;\n    font-size: 16px;\n    line-height: 150%;\n    color: #4a4a4a;\n    text-align: center;\n}\n\n@media (min-width: 1440px) {\n    .footer {\n        padding-top: 27px;\n        padding-bottom: 27px;\n    }\n}"],"names":[],"mappings":"AAAA;;;;;;;;;AASA;;;;;;;;AAQA;EACI"}}]
+}

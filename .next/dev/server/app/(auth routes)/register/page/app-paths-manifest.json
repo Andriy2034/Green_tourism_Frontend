@@ -1,0 +1,3 @@
+{
+  "/(auth routes)/register/page": "app/(auth routes)/register/page.js"
+}

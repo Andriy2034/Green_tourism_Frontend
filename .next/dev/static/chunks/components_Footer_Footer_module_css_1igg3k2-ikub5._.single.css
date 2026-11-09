@@ -1,0 +1,80 @@
+/* [project]/components/Footer/Footer.module.css [app-client] (css) */
+.Footer-module__rnk_JG__footer {
+  color: #1b391b;
+  background-color: #def2de;
+}
+
+.Footer-module__rnk_JG__container {
+  flex-direction: column;
+  gap: 24px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 48px 20px;
+  display: flex;
+}
+
+.Footer-module__rnk_JG__top {
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  display: flex;
+}
+
+.Footer-module__rnk_JG__logo {
+  transition: opacity .25s;
+}
+
+.Footer-module__rnk_JG__logo:hover {
+  opacity: .7;
+}
+
+.Footer-module__rnk_JG__credits {
+  border-top: 1px solid #00000026;
+  padding-top: 32px;
+}
+
+@media (min-width: 768px) {
+  .Footer-module__rnk_JG__container {
+    max-width: 768px;
+    padding: 48px 32px;
+  }
+
+  .Footer-module__rnk_JG__top {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "logo social"
+                         "nav nav";
+    gap: 24px;
+    display: grid;
+  }
+
+  .Footer-module__rnk_JG__logo {
+    grid-area: logo;
+    justify-self: start;
+  }
+
+  .Footer-module__rnk_JG__social {
+    grid-area: social;
+  }
+
+  .Footer-module__rnk_JG__nav {
+    grid-area: nav;
+  }
+}
+
+@media (min-width: 1440px) {
+  .Footer-module__rnk_JG__container {
+    max-width: 1440px;
+    padding: 80px 64px;
+  }
+
+  .Footer-module__rnk_JG__top {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "logo social nav";
+  }
+
+  .Footer-module__rnk_JG__nav {
+    justify-self: end;
+  }
+}
+
+/*# sourceMappingURL=components_Footer_Footer_module_css_1igg3k2-ikub5._.single.css.map*/

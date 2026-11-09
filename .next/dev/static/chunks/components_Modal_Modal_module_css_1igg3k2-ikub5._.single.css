@@ -1,0 +1,19 @@
+/* [project]/components/Modal/Modal.module.css [app-client] (css) */
+.Modal-module__sR2AWG__backdrop {
+  z-index: 9999;
+  background-color: #0006;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.Modal-module__sR2AWG__modal {
+  position: relative;
+}
+
+/*# sourceMappingURL=components_Modal_Modal_module_css_1igg3k2-ikub5._.single.css.map*/

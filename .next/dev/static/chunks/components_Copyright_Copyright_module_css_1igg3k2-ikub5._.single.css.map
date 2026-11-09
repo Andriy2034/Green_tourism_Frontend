@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/components/Copyright/Copyright.module.css"],"sourcesContent":[".copyright {\n  max-width: 240px;\n  margin: 0 auto;\n  font-weight: 400;\n  font-size: 12px;\n  line-height: 1.5;\n  text-align: center;\n}\n\n@media (min-width: 768px) {\n  .copyright {\n    max-width: none;\n  }\n}\n\n@media (min-width: 1440px) {\n  .copyright {\n    font-size: 16px;\n  }\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;AASA;EACE;;;;;AAKF;EACE"}}]
+}

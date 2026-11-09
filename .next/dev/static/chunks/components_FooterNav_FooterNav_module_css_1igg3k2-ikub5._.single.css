@@ -1,0 +1,47 @@
+/* [project]/components/FooterNav/FooterNav.module.css [app-client] (css) */
+.FooterNav-module__rF_koW__list {
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.FooterNav-module__rF_koW__link {
+  color: inherit;
+  cursor: pointer;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: opacity .25s;
+  display: block;
+}
+
+.FooterNav-module__rF_koW__link:focus-visible {
+  outline-offset: 2px;
+  outline: 2px solid;
+}
+
+.FooterNav-module__rF_koW__link:hover {
+  opacity: .7;
+}
+
+@media (min-width: 768px) {
+  .FooterNav-module__rF_koW__list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .FooterNav-module__rF_koW__link {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=components_FooterNav_FooterNav_module_css_1igg3k2-ikub5._.single.css.map*/
